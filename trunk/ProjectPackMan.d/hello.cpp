@@ -5,6 +5,6 @@
 #include <iostream>
 int main(void)
 {
-    std::cout << "My name is Alain Salanie !" << std::endl;
+    std::cout << "My name is A.S !" << std::endl;
     return 0;
 }
