@@ -2,7 +2,7 @@
 
 #include "BoardObjectH.h"
 #include "PlayerH.h"
-
+//! Defines what happens when the player is touched
 void Player :: touch ()
 		{ switch (status)
 		  { case ALIVE : if (color1==get_Color() )

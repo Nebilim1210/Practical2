@@ -17,7 +17,7 @@ protected:
 public:
         BoardObject (int start_x, int start_y)
                 { x=start_x; y=start_y;
-                  currentColor=BACKGROUND; 
+                  currentColor=BACKGROUND;
 		  myClass=THE_BACKGROUND;
 		  
 		  //unique_ID=count++;

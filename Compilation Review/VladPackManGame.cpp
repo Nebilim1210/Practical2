@@ -3,7 +3,7 @@
 #include "BoardH.h"
 
 using namespace std;
-
+//! Draws the banner of the game instructions.
 void banner()
 {
 	cout << "***************************************************" << endl;
@@ -22,7 +22,7 @@ void banner()
 
 
 }
-
+//! main function, tests the methods of VectorBoardObjects then launches the game.
 int main()
 
 {

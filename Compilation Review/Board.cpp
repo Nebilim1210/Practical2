@@ -6,7 +6,7 @@
 
 using namespace std;
 
-
+//! Uses the touch method on all objects of a list
 void touch_all (p_ListBoardObjects aList)
 {
 	p_BoardObject toIterate;
@@ -24,6 +24,7 @@ void touch_all (p_ListBoardObjects aList)
 
 }
 //Also we changed this function because it contained an error. Thus, we improved the Switch at the end.
+//! defines the color of a tile based on the object on the list in it
 char game_all (p_ListBoardObjects aList)
 {
     p_BoardObject toIterate;
@@ -50,7 +51,7 @@ char game_all (p_ListBoardObjects aList)
         default: return 'X';
     }
 }
-
+//! Moves the character based on the command received.
 void Board:: move(char command)
 {
 	if ('p'!=command)
@@ -111,7 +112,7 @@ void Board:: move(char command)
 
 	}
 }
-
+//! Creates the board for the player to view it.
 void Board:: paint()
 	{ char draw;
           std::string row;
