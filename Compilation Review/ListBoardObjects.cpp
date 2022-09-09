@@ -62,7 +62,6 @@ bool ListBoardObjects :: isThereAWall()
 		   {  return true;}
                   it++;
 		}
-
 	   return false ;
 	}
 
