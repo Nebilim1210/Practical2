@@ -1,0 +1,228 @@
+\hypertarget{classListBoardObjects}{}\doxysection{List\+Board\+Objects Class Reference}
+\label{classListBoardObjects}\index{ListBoardObjects@{ListBoardObjects}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListBoardObjects_af474c7dbbbbc6ac1b2c886ea08abdbfc}{List\+Board\+Objects}} (\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classListBoardObjects_a99823cbc8fadb9cfc2f0721bc2fc44ea}{the\+First}})
+\begin{DoxyCompactList}\small\item\em Constructor of a \mbox{\hyperlink{classListBoardObjects}{List\+Board\+Objects}}. this list can\textquotesingle{}t be empty so an argument to choose the first element is necessary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classListBoardObjects_a99823cbc8fadb9cfc2f0721bc2fc44ea}{the\+First}} ()
+\begin{DoxyCompactList}\small\item\em Gets the first element of our list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classListBoardObjects_a644799670f8637cad6607f960848c057}{the\+Next}} ()
+\begin{DoxyCompactList}\small\item\em After the\+First has been called, the\+Next works as an iterator pointing to every object of the list in order starting from the second one. Returns NULL when arrived at the end of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListBoardObjects_a6459b713eb7c18bae3907a9285008521}{add\+One}} (\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} new\+One)
+\begin{DoxyCompactList}\small\item\em Adds one object set as parameter in our list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListBoardObjects_a6270d07a5f491dd3e1a71785cedc8d9e}{remove\+One\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Removes a player object from the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classListBoardObjects_a9ed1ab67e89f80dfb571e44b4849a71e}{is\+There\+AWall}} ()
+\begin{DoxyCompactList}\small\item\em returns true if a wall object is present in the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListBoardObjects_a8b5648ed76f905e7bd6794e48ee3bcbb}{is\+Cookie\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns the value of a cookie if one is present in the list. If that\textquotesingle{}s the case, remove the first cookie encountered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjectsH_8h_source_l00010}{10}} of file \mbox{\hyperlink{ListBoardObjectsH_8h_source}{List\+Board\+Objects\+H.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classListBoardObjects_af474c7dbbbbc6ac1b2c886ea08abdbfc}\label{classListBoardObjects_af474c7dbbbbc6ac1b2c886ea08abdbfc}} 
+\index{ListBoardObjects@{ListBoardObjects}!ListBoardObjects@{ListBoardObjects}}
+\index{ListBoardObjects@{ListBoardObjects}!ListBoardObjects@{ListBoardObjects}}
+\doxysubsubsection{\texorpdfstring{ListBoardObjects()}{ListBoardObjects()}}
+{\footnotesize\ttfamily List\+Board\+Objects\+::\+List\+Board\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}}}]{the\+First }\end{DoxyParamCaption})}
+
+
+
+Constructor of a \mbox{\hyperlink{classListBoardObjects}{List\+Board\+Objects}}. this list can\textquotesingle{}t be empty so an argument to choose the first element is necessary. 
+
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjects_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{ListBoardObjects_8cpp_source}{List\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006                                                        :list()}
+\DoxyCodeLine{00007     \{}
+\DoxyCodeLine{00008         std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00009         it=list.begin();}
+\DoxyCodeLine{00010         list.insert(it,newOne);}
+\DoxyCodeLine{00011         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classListBoardObjects_a6459b713eb7c18bae3907a9285008521}\label{classListBoardObjects_a6459b713eb7c18bae3907a9285008521}} 
+\index{ListBoardObjects@{ListBoardObjects}!addOne@{addOne}}
+\index{addOne@{addOne}!ListBoardObjects@{ListBoardObjects}}
+\doxysubsubsection{\texorpdfstring{addOne()}{addOne()}}
+{\footnotesize\ttfamily void List\+Board\+Objects\+::add\+One (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}}}]{new\+One }\end{DoxyParamCaption})}
+
+
+
+Adds one object set as parameter in our list. 
+
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjects_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{ListBoardObjects_8cpp_source}{List\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025      \{ }
+\DoxyCodeLine{00026         std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00027         it=list.begin();}
+\DoxyCodeLine{00028         list.insert(it,newOne);}
+\DoxyCodeLine{00029      \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListBoardObjects_a8b5648ed76f905e7bd6794e48ee3bcbb}\label{classListBoardObjects_a8b5648ed76f905e7bd6794e48ee3bcbb}} 
+\index{ListBoardObjects@{ListBoardObjects}!isCookieValue@{isCookieValue}}
+\index{isCookieValue@{isCookieValue}!ListBoardObjects@{ListBoardObjects}}
+\doxysubsubsection{\texorpdfstring{isCookieValue()}{isCookieValue()}}
+{\footnotesize\ttfamily int List\+Board\+Objects\+::is\+Cookie\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the value of a cookie if one is present in the list. If that\textquotesingle{}s the case, remove the first cookie encountered. 
+
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjects_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{ListBoardObjects_8cpp_source}{List\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071     \{   \textcolor{keywordtype}{int} temp=0;}
+\DoxyCodeLine{00072        std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00073        it=list.begin();}
+\DoxyCodeLine{00074        \textcolor{keywordflow}{while} (it<list.end())}
+\DoxyCodeLine{00075         \{ \textcolor{keywordflow}{if} (A\_COOKIE==(*it)-\/>get\_Type())}
+\DoxyCodeLine{00076            \{ temp= ((\mbox{\hyperlink{classCookie}{Cookie}} *)(*it))-\/>get\_value();}
+\DoxyCodeLine{00077              list.erase(it); }
+\DoxyCodeLine{00078              \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{00079                    \}}
+\DoxyCodeLine{00080                   it++;}
+\DoxyCodeLine{00081         \}}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083        \textcolor{keywordflow}{return} temp ;}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListBoardObjects_a9ed1ab67e89f80dfb571e44b4849a71e}\label{classListBoardObjects_a9ed1ab67e89f80dfb571e44b4849a71e}} 
+\index{ListBoardObjects@{ListBoardObjects}!isThereAWall@{isThereAWall}}
+\index{isThereAWall@{isThereAWall}!ListBoardObjects@{ListBoardObjects}}
+\doxysubsubsection{\texorpdfstring{isThereAWall()}{isThereAWall()}}
+{\footnotesize\ttfamily bool List\+Board\+Objects\+::is\+There\+AWall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns true if a wall object is present in the list. 
+
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjects_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{ListBoardObjects_8cpp_source}{List\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057     \{}
+\DoxyCodeLine{00058        std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00059        it=list.begin();}
+\DoxyCodeLine{00060        \textcolor{keywordflow}{while} (it<list.end())}
+\DoxyCodeLine{00061         \{ \textcolor{keywordflow}{if} (A\_WALL==(*it)-\/>get\_Type())}
+\DoxyCodeLine{00062            \{  \textcolor{keywordflow}{return} \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00063                   it++;}
+\DoxyCodeLine{00064         \}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066        \textcolor{keywordflow}{return} false ;}
+\DoxyCodeLine{00067     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListBoardObjects_a6270d07a5f491dd3e1a71785cedc8d9e}\label{classListBoardObjects_a6270d07a5f491dd3e1a71785cedc8d9e}} 
+\index{ListBoardObjects@{ListBoardObjects}!removeOnePlayer@{removeOnePlayer}}
+\index{removeOnePlayer@{removeOnePlayer}!ListBoardObjects@{ListBoardObjects}}
+\doxysubsubsection{\texorpdfstring{removeOnePlayer()}{removeOnePlayer()}}
+{\footnotesize\ttfamily void List\+Board\+Objects\+::remove\+One\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes a player object from the list. 
+
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjects_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{ListBoardObjects_8cpp_source}{List\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043     \{}
+\DoxyCodeLine{00044        std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00045        it=list.begin();}
+\DoxyCodeLine{00046        \textcolor{keywordflow}{while} (it<list.end())}
+\DoxyCodeLine{00047         \{ \textcolor{keywordflow}{if} (A\_PLAYER==(*it)-\/>get\_Type())}
+\DoxyCodeLine{00048            \{ list.erase(it); \textcolor{keywordflow}{return};\}}
+\DoxyCodeLine{00049                   it++;}
+\DoxyCodeLine{00050         \}}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052        return ;}
+\DoxyCodeLine{00053     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListBoardObjects_a99823cbc8fadb9cfc2f0721bc2fc44ea}\label{classListBoardObjects_a99823cbc8fadb9cfc2f0721bc2fc44ea}} 
+\index{ListBoardObjects@{ListBoardObjects}!theFirst@{theFirst}}
+\index{theFirst@{theFirst}!ListBoardObjects@{ListBoardObjects}}
+\doxysubsubsection{\texorpdfstring{theFirst()}{theFirst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} List\+Board\+Objects\+::the\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the first element of our list. 
+
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjects_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{ListBoardObjects_8cpp_source}{List\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015        \textcolor{keywordflow}{if} (0 < list.size()  )}
+\DoxyCodeLine{00016         \{ internalIterator=list.begin();}
+\DoxyCodeLine{00017           \textcolor{keywordflow}{return} (*internalIterator);}
+\DoxyCodeLine{00018         \}}
+\DoxyCodeLine{00019        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00020         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00021     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListBoardObjects_a644799670f8637cad6607f960848c057}\label{classListBoardObjects_a644799670f8637cad6607f960848c057}} 
+\index{ListBoardObjects@{ListBoardObjects}!theNext@{theNext}}
+\index{theNext@{theNext}!ListBoardObjects@{ListBoardObjects}}
+\doxysubsubsection{\texorpdfstring{theNext()}{theNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} List\+Board\+Objects\+::the\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+After the\+First has been called, the\+Next works as an iterator pointing to every object of the list in order starting from the second one. Returns NULL when arrived at the end of the list. 
+
+
+
+Definition at line \mbox{\hyperlink{ListBoardObjects_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{ListBoardObjects_8cpp_source}{List\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033        internalIterator++;}
+\DoxyCodeLine{00034        \textcolor{keywordflow}{if} (internalIterator < list.end())}
+\DoxyCodeLine{00035        \{}
+\DoxyCodeLine{00036            \textcolor{keywordflow}{return} (*internalIterator);}
+\DoxyCodeLine{00037        \}}
+\DoxyCodeLine{00038        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00039         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00040     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+List\+Board\+Objects\+H.\+h\item 
+List\+Board\+Objects.\+cpp\end{DoxyCompactItemize}

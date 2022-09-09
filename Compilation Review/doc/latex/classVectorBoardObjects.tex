@@ -1,0 +1,234 @@
+\hypertarget{classVectorBoardObjects}{}\doxysection{Vector\+Board\+Objects Class Reference}
+\label{classVectorBoardObjects}\index{VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVectorBoardObjects_a08d6451209ed603b7032672a5e4df287}{Vector\+Board\+Objects}} (\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}{the\+First}})
+\begin{DoxyCompactList}\small\item\em Constructor of a \mbox{\hyperlink{classVectorBoardObjects}{Vector\+Board\+Objects}}. This vector can\textquotesingle{}t be empty so an argument to choose the first element is necessary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}{the\+First}} ()
+\begin{DoxyCompactList}\small\item\em Gets the first element of our vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} \mbox{\hyperlink{classVectorBoardObjects_a35a5be66b34871014d5a5b5324c4b4d9}{the\+Next}} ()
+\begin{DoxyCompactList}\small\item\em After the\+First has been called, the\+Next works as an iterator pointing to every object of the vector in order starting from the second one. Returns NULL when arrived at the end of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVectorBoardObjects_a3ccfcfeae8301dc08fd4db310e8b31ff}{add\+One}} (\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} new\+One)
+\begin{DoxyCompactList}\small\item\em Adds one object set as parameter in our vector. Prints an error message if the limit of four objects in our vector is passed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVectorBoardObjects_a2c357e9cc68511363f2d67c1ddf9fa57}{remove\+One\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Removes a player object from the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classVectorBoardObjects_a7fcf7bac6e8743ba685b55460c46ac6a}{is\+There\+AWall}} ()
+\begin{DoxyCompactList}\small\item\em returns true if a wall object is present in the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classVectorBoardObjects_a8c1c852ead148779e03db687c457da85}{is\+Cookie\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns the value of a cookie if one is present in the list. If that\textquotesingle{}s the case, remove the first cookie encountered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8h_source_l00010}{10}} of file \mbox{\hyperlink{VectorBoardObjects_8h_source}{Vector\+Board\+Objects.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVectorBoardObjects_a08d6451209ed603b7032672a5e4df287}\label{classVectorBoardObjects_a08d6451209ed603b7032672a5e4df287}} 
+\index{VectorBoardObjects@{VectorBoardObjects}!VectorBoardObjects@{VectorBoardObjects}}
+\index{VectorBoardObjects@{VectorBoardObjects}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{VectorBoardObjects()}{VectorBoardObjects()}}
+{\footnotesize\ttfamily Vector\+Board\+Objects\+::\+Vector\+Board\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}}}]{the\+First }\end{DoxyParamCaption})}
+
+
+
+Constructor of a \mbox{\hyperlink{classVectorBoardObjects}{Vector\+Board\+Objects}}. This vector can\textquotesingle{}t be empty so an argument to choose the first element is necessary. 
+
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{VectorBoardObjects_8cpp_source}{Vector\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008                                                            :vector()}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010     std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00011     it=vector.begin();}
+\DoxyCodeLine{00012     vector.insert(it,newOne);}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVectorBoardObjects_a3ccfcfeae8301dc08fd4db310e8b31ff}\label{classVectorBoardObjects_a3ccfcfeae8301dc08fd4db310e8b31ff}} 
+\index{VectorBoardObjects@{VectorBoardObjects}!addOne@{addOne}}
+\index{addOne@{addOne}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{addOne()}{addOne()}}
+{\footnotesize\ttfamily void Vector\+Board\+Objects\+::add\+One (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}}}]{new\+One }\end{DoxyParamCaption})}
+
+
+
+Adds one object set as parameter in our vector. Prints an error message if the limit of four objects in our vector is passed. 
+
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{VectorBoardObjects_8cpp_source}{Vector\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028 \{}
+\DoxyCodeLine{00029     \textcolor{keywordflow}{if} (vector.size() < 4) \{}
+\DoxyCodeLine{00030         std::vector<p\_BoardObject>::iterator it;}
+\DoxyCodeLine{00031         it = vector.begin();}
+\DoxyCodeLine{00032         vector.insert(it, newOne);}
+\DoxyCodeLine{00033     \} \textcolor{keywordflow}{else} \textcolor{comment}{//There are already 4 objects in our vector.}}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         std::cerr << \textcolor{stringliteral}{"{}Tried to add new object in VectorBoardObjects but maximum of objects in vector is 4."{}} << std::endl;}
+\DoxyCodeLine{00036         \textcolor{comment}{//throw std::invalid\_argument( "{}Tried to add new object in VectorBoardObjects but maximum of objects in vector is 4."{} );}}
+\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00038 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVectorBoardObjects_a8c1c852ead148779e03db687c457da85}\label{classVectorBoardObjects_a8c1c852ead148779e03db687c457da85}} 
+\index{VectorBoardObjects@{VectorBoardObjects}!isCookieValue@{isCookieValue}}
+\index{isCookieValue@{isCookieValue}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{isCookieValue()}{isCookieValue()}}
+{\footnotesize\ttfamily int Vector\+Board\+Objects\+::is\+Cookie\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the value of a cookie if one is present in the list. If that\textquotesingle{}s the case, remove the first cookie encountered. 
+
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{VectorBoardObjects_8cpp_source}{Vector\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086 \{   \textcolor{keywordtype}{int} temp=0;}
+\DoxyCodeLine{00087     std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00088     it=vector.begin();}
+\DoxyCodeLine{00089     \textcolor{keywordflow}{while} (it<vector.end())}
+\DoxyCodeLine{00090     \{ \textcolor{keywordflow}{if} (A\_COOKIE==(*it)-\/>get\_Type())}
+\DoxyCodeLine{00091         \{ temp= ((\mbox{\hyperlink{classCookie}{Cookie}} *)(*it))-\/>get\_value();}
+\DoxyCodeLine{00092             vector.erase(it);}
+\DoxyCodeLine{00093             \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{00094         \}}
+\DoxyCodeLine{00095         it++;}
+\DoxyCodeLine{00096     \}}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098     \textcolor{keywordflow}{return} temp ;}
+\DoxyCodeLine{00099 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVectorBoardObjects_a7fcf7bac6e8743ba685b55460c46ac6a}\label{classVectorBoardObjects_a7fcf7bac6e8743ba685b55460c46ac6a}} 
+\index{VectorBoardObjects@{VectorBoardObjects}!isThereAWall@{isThereAWall}}
+\index{isThereAWall@{isThereAWall}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{isThereAWall()}{isThereAWall()}}
+{\footnotesize\ttfamily bool Vector\+Board\+Objects\+::is\+There\+AWall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns true if a wall object is present in the list. 
+
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{VectorBoardObjects_8cpp_source}{Vector\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071 \{}
+\DoxyCodeLine{00072     std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00073     it=vector.begin();}
+\DoxyCodeLine{00074     \textcolor{keywordflow}{while} (it<vector.end())}
+\DoxyCodeLine{00075     \{ \textcolor{keywordflow}{if} (A\_WALL==(*it)-\/>get\_Type())}
+\DoxyCodeLine{00076         \{  \textcolor{keywordflow}{return} \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00077         it++;}
+\DoxyCodeLine{00078     \}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     \textcolor{keywordflow}{return} false ;}
+\DoxyCodeLine{00081 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVectorBoardObjects_a2c357e9cc68511363f2d67c1ddf9fa57}\label{classVectorBoardObjects_a2c357e9cc68511363f2d67c1ddf9fa57}} 
+\index{VectorBoardObjects@{VectorBoardObjects}!removeOnePlayer@{removeOnePlayer}}
+\index{removeOnePlayer@{removeOnePlayer}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{removeOnePlayer()}{removeOnePlayer()}}
+{\footnotesize\ttfamily void Vector\+Board\+Objects\+::remove\+One\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes a player object from the list. 
+
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{VectorBoardObjects_8cpp_source}{Vector\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056 \{}
+\DoxyCodeLine{00057     std::vector <p\_BoardObject>:: iterator it;}
+\DoxyCodeLine{00058     it=vector.begin();}
+\DoxyCodeLine{00059     \textcolor{keywordflow}{while} (it<vector.end())}
+\DoxyCodeLine{00060     \{ \textcolor{keywordflow}{if} (A\_PLAYER==(*it)-\/>get\_Type())}
+\DoxyCodeLine{00061         \{ vector.erase(it); \textcolor{keywordflow}{return};\}}
+\DoxyCodeLine{00062         it++;}
+\DoxyCodeLine{00063     \}}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065     return ;}
+\DoxyCodeLine{00066 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}\label{classVectorBoardObjects_a0764ad1785c4f7256d867dd08bbb2bfd}} 
+\index{VectorBoardObjects@{VectorBoardObjects}!theFirst@{theFirst}}
+\index{theFirst@{theFirst}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{theFirst()}{theFirst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} Vector\+Board\+Objects\+::the\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the first element of our vector. 
+
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{VectorBoardObjects_8cpp_source}{Vector\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{if} (0 < vector.size())}
+\DoxyCodeLine{00018     \{ internalIterator=vector.begin();}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{return} (*internalIterator);}
+\DoxyCodeLine{00020     \}}
+\DoxyCodeLine{00021     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00023 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classVectorBoardObjects_a35a5be66b34871014d5a5b5324c4b4d9}\label{classVectorBoardObjects_a35a5be66b34871014d5a5b5324c4b4d9}} 
+\index{VectorBoardObjects@{VectorBoardObjects}!theNext@{theNext}}
+\index{theNext@{theNext}!VectorBoardObjects@{VectorBoardObjects}}
+\doxysubsubsection{\texorpdfstring{theNext()}{theNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBoardObject}{p\+\_\+\+Board\+Object}} Vector\+Board\+Objects\+::the\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+After the\+First has been called, the\+Next works as an iterator pointing to every object of the vector in order starting from the second one. Returns NULL when arrived at the end of the vector. 
+
+
+
+Definition at line \mbox{\hyperlink{VectorBoardObjects_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{VectorBoardObjects_8cpp_source}{Vector\+Board\+Objects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043 \{}
+\DoxyCodeLine{00044     internalIterator++;}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{if} (internalIterator < vector.end())}
+\DoxyCodeLine{00046     \{}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{return} (*internalIterator);}
+\DoxyCodeLine{00048     \}}
+\DoxyCodeLine{00049     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00050         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vector\+Board\+Objects.\+h\item 
+Vector\+Board\+Objects.\+cpp\end{DoxyCompactItemize}

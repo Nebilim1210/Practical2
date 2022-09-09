@@ -1,0 +1,73 @@
+\hypertarget{classMonster}{}\doxysection{Monster Class Reference}
+\label{classMonster}\index{Monster@{Monster}}
+Inheritance diagram for Monster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMonster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMonster_abe188bac1b84c3702b3b85153708179b}{Monster}} (int startX, int startY)
+\item 
+void \mbox{\hyperlink{classMonster_afbb1b8fffa5b2c0b30fd103aa7ae4801}{touch}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Monster_8h_source_l00006}{6}} of file \mbox{\hyperlink{Monster_8h_source}{Monster.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMonster_abe188bac1b84c3702b3b85153708179b}\label{classMonster_abe188bac1b84c3702b3b85153708179b}} 
+\index{Monster@{Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Monster()}{Monster()}}
+{\footnotesize\ttfamily Monster\+::\+Monster (\begin{DoxyParamCaption}\item[{int}]{startX,  }\item[{int}]{startY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{Monster_8h_source_l00012}{12}} of file \mbox{\hyperlink{Monster_8h_source}{Monster.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012                                     : \mbox{\hyperlink{classBoardObject}{BoardObject}}(startX, startY) \{}
+\DoxyCodeLine{00013         color = RED;}
+\DoxyCodeLine{00014     \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMonster_afbb1b8fffa5b2c0b30fd103aa7ae4801}\label{classMonster_afbb1b8fffa5b2c0b30fd103aa7ae4801}} 
+\index{Monster@{Monster}!touch@{touch}}
+\index{touch@{touch}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{touch()}{touch()}}
+{\footnotesize\ttfamily void Monster\+::touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classBoardObject}{Board\+Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Monster_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{Monster_8cpp_source}{Monster.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006     std::cout << \textcolor{stringliteral}{"{}You touched a monster."{}} << std::endl;}
+\DoxyCodeLine{00007 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Monster.\+h\item 
+Monster.\+cpp\end{DoxyCompactItemize}

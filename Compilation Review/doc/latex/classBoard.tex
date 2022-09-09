@@ -1,0 +1,216 @@
+\hypertarget{classBoard}{}\doxysection{Board Class Reference}
+\label{classBoard}\index{Board@{Board}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBoard_aaf26049ef790a1707f7214516c317bad}{Board}} (int rows, int cols)
+\item 
+bool \mbox{\hyperlink{classBoard_a50c58245b306a2cab7487b2258e582ef}{set\+Board\+OK}} ()
+\item 
+void \mbox{\hyperlink{classBoard_a374a1234d9e64ace51c669ad5d061fa4}{paint}} ()
+\item 
+void \mbox{\hyperlink{classBoard_a7ed62f55e30d4baaa411bab3b9192b64}{move}} (char command)
+\item 
+bool \mbox{\hyperlink{classBoard_a1a096f11fed61b57135b98b11a0eb452}{Iam\+Alive}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{BoardH_8h_source_l00019}{19}} of file \mbox{\hyperlink{BoardH_8h_source}{Board\+H.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBoard_aaf26049ef790a1707f7214516c317bad}\label{classBoard_aaf26049ef790a1707f7214516c317bad}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardH_8h_source_l00038}{38}} of file \mbox{\hyperlink{BoardH_8h_source}{Board\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039     \{}
+\DoxyCodeLine{00040       \textcolor{keywordflow}{if} ((ROWS >= rows ) \&\& (COLUMNS >= cols)) }
+\DoxyCodeLine{00041         \{ setOK-\/\textcolor{keyword}{true}; the\_rows=rows; the\_cols=cols;}
+\DoxyCodeLine{00042                   lives=3000000; gameOn=\textcolor{keyword}{true};}
+\DoxyCodeLine{00043             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;  i<rows; i++)}
+\DoxyCodeLine{00044               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0;  j<cols; j++)}
+\DoxyCodeLine{00045                 \{}
+\DoxyCodeLine{00046                       \mbox{\hyperlink{classBoardObject}{BoardObject}}* aBackground = \textcolor{keyword}{new} \mbox{\hyperlink{classBoardObject}{BoardObject}}(i,j);}
+\DoxyCodeLine{00047                   \mbox{\hyperlink{classListBoardObjects}{p\_ListBoardObjects}} aList =\textcolor{keyword}{new} \mbox{\hyperlink{classListBoardObjects}{ListBoardObjects}}(aBackground);}
+\DoxyCodeLine{00048                   mySpace[i][j]=aList;}
+\DoxyCodeLine{00049                 \}}
+\DoxyCodeLine{00050             player\_id\_x =the\_rows/2;}
+\DoxyCodeLine{00051             player\_id\_y =the\_cols/2;}
+\DoxyCodeLine{00052             startPlayer = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{00053             currentScore =0;}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055                     (mySpace[player\_id\_x][player\_id\_y])-\/>addOne(startPlayer);}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<the\_rows-\/1; i++)}
+\DoxyCodeLine{00058                \{ \mbox{\hyperlink{classWall}{Wall}} * aWall = \textcolor{keyword}{new} \mbox{\hyperlink{classWall}{Wall}} (i,1);}
+\DoxyCodeLine{00059                          (mySpace[i][1])-\/>addOne(aWall);}
+\DoxyCodeLine{00060                  aWall = \textcolor{keyword}{new} \mbox{\hyperlink{classWall}{Wall}} (i,the\_cols-\/2);}
+\DoxyCodeLine{00061                          (mySpace[i][the\_cols-\/2])-\/>addOne(aWall);}
+\DoxyCodeLine{00062             \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<the\_rows-\/1; i=i+2)}
+\DoxyCodeLine{00065                \{ \mbox{\hyperlink{classCookie}{Cookie}} * aCookie = \textcolor{keyword}{new} \mbox{\hyperlink{classCookie}{Cookie}} (i,0);}
+\DoxyCodeLine{00066                          (mySpace[i][0])-\/>addOne(aCookie);}
+\DoxyCodeLine{00067                  aCookie = \textcolor{keyword}{new} \mbox{\hyperlink{classCookie}{Cookie}} (i,the\_cols-\/1);}
+\DoxyCodeLine{00068                          (mySpace[i][the\_cols-\/1])-\/>addOne(aCookie);}
+\DoxyCodeLine{00069             \}}
+\DoxyCodeLine{00070         \}}
+\DoxyCodeLine{00071       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00072         setOK=\textcolor{keyword}{false};}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBoard_a1a096f11fed61b57135b98b11a0eb452}\label{classBoard_a1a096f11fed61b57135b98b11a0eb452}} 
+\index{Board@{Board}!IamAlive@{IamAlive}}
+\index{IamAlive@{IamAlive}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{IamAlive()}{IamAlive()}}
+{\footnotesize\ttfamily bool Board\+::\+Iam\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardH_8h_source_l00082}{82}} of file \mbox{\hyperlink{BoardH_8h_source}{Board\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082                     \{\textcolor{keywordflow}{if} (0<lives) \{ lives-\/-\/; \textcolor{keywordflow}{return} \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00083                          \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoard_a7ed62f55e30d4baaa411bab3b9192b64}\label{classBoard_a7ed62f55e30d4baaa411bab3b9192b64}} 
+\index{Board@{Board}!move@{move}}
+\index{move@{move}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Board\+::move (\begin{DoxyParamCaption}\item[{char}]{command }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Board_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{Board_8cpp_source}{Board.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055 \{}
+\DoxyCodeLine{00056     \textcolor{keywordflow}{if} (\textcolor{charliteral}{'p'}!=command)}
+\DoxyCodeLine{00057     \{}
+\DoxyCodeLine{00058       \textcolor{keywordflow}{switch} (command)}
+\DoxyCodeLine{00059        \{ \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}: \textcolor{keywordflow}{if} (player\_id\_x<=0) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00060             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00061               \{ }
+\DoxyCodeLine{00062                             \textcolor{keywordflow}{if} (!  mySpace[player\_id\_x-\/1][player\_id\_y]-\/>isThereAWall())}
+\DoxyCodeLine{00063                   \{ mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6270d07a5f491dd3e1a71785cedc8d9e}{removeOnePlayer}}();}
+\DoxyCodeLine{00064                     player\_id\_x-\/-\/;}
+\DoxyCodeLine{00065                     startPlayer = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{00066                                 mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6459b713eb7c18bae3907a9285008521}{addOne}}(startPlayer);}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068                               \}}
+\DoxyCodeLine{00069               \}}
+\DoxyCodeLine{00070              \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00071          \textcolor{keywordflow}{case} \textcolor{charliteral}{'x'}: \textcolor{keywordflow}{if} (player\_id\_x>=the\_rows-\/1) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00072             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00073               \{ }
+\DoxyCodeLine{00074                             \textcolor{keywordflow}{if} (!  mySpace[player\_id\_x+1][player\_id\_y]-\/>isThereAWall())}
+\DoxyCodeLine{00075                   \{ mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6270d07a5f491dd3e1a71785cedc8d9e}{removeOnePlayer}}();}
+\DoxyCodeLine{00076                     player\_id\_x++;}
+\DoxyCodeLine{00077                     startPlayer = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{00078                                 mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6459b713eb7c18bae3907a9285008521}{addOne}}(startPlayer);}
+\DoxyCodeLine{00079                               \}}
+\DoxyCodeLine{00080               \}}
+\DoxyCodeLine{00081              \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082          \textcolor{keywordflow}{case} \textcolor{charliteral}{'s'}: \textcolor{keywordflow}{if} (player\_id\_y<=0) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00083             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00084               \{ }
+\DoxyCodeLine{00085                             \textcolor{keywordflow}{if} (!  mySpace[player\_id\_x][player\_id\_y-\/1]-\/>isThereAWall())}
+\DoxyCodeLine{00086                   \{ mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6270d07a5f491dd3e1a71785cedc8d9e}{removeOnePlayer}}();}
+\DoxyCodeLine{00087                     player\_id\_y-\/-\/;}
+\DoxyCodeLine{00088                     startPlayer = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{00089                                 mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6459b713eb7c18bae3907a9285008521}{addOne}}(startPlayer);}
+\DoxyCodeLine{00090                               \}}
+\DoxyCodeLine{00091               \}}
+\DoxyCodeLine{00092              \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00093          \textcolor{keywordflow}{case} \textcolor{charliteral}{'d'}: \textcolor{keywordflow}{if} (player\_id\_y>=the\_cols-\/1) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094                        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00095               \{ }
+\DoxyCodeLine{00096                             \textcolor{keywordflow}{if} (!  mySpace[player\_id\_x][player\_id\_y+1]-\/>isThereAWall())}
+\DoxyCodeLine{00097                   \{ mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6270d07a5f491dd3e1a71785cedc8d9e}{removeOnePlayer}}();}
+\DoxyCodeLine{00098                     player\_id\_y++;}
+\DoxyCodeLine{00099                     startPlayer = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{00100                                 mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a6459b713eb7c18bae3907a9285008521}{addOne}}(startPlayer);}
+\DoxyCodeLine{00101                               \}}
+\DoxyCodeLine{00102               \}}
+\DoxyCodeLine{00103              \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00104        \}}
+\DoxyCodeLine{00105        \textcolor{keywordtype}{int} cookieValue = mySpace[player\_id\_x][player\_id\_y]-\/>\mbox{\hyperlink{classListBoardObjects_a8b5648ed76f905e7bd6794e48ee3bcbb}{isCookieValue}}();}
+\DoxyCodeLine{00106        \textcolor{keywordflow}{if} (cookieValue>0)}
+\DoxyCodeLine{00107         \{}
+\DoxyCodeLine{00108             std::cerr << \textcolor{stringliteral}{"{}Ate a cookie\(\backslash\)n"{}};}
+\DoxyCodeLine{00109             currentScore+=cookieValue;}
+\DoxyCodeLine{00110         \}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112     \}}
+\DoxyCodeLine{00113 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoard_a374a1234d9e64ace51c669ad5d061fa4}\label{classBoard_a374a1234d9e64ace51c669ad5d061fa4}} 
+\index{Board@{Board}!paint@{paint}}
+\index{paint@{paint}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Board\+::paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Board_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{Board_8cpp_source}{Board.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116     \{ \textcolor{keywordtype}{char} draw;}
+\DoxyCodeLine{00117           std::string row;}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<the\_rows; i++)}
+\DoxyCodeLine{00120        \{ row=\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00121          \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<the\_cols; j++)}
+\DoxyCodeLine{00122         \{  touch\_all (mySpace[i][j]);}
+\DoxyCodeLine{00123            draw =game\_all(mySpace[i][j]);}
+\DoxyCodeLine{00124            row.push\_back(draw);}
+\DoxyCodeLine{00125         \}}
+\DoxyCodeLine{00126               cout << row << endl;}
+\DoxyCodeLine{00127            \}}
+\DoxyCodeLine{00128        cout << \textcolor{stringliteral}{"{}CURRENT SCORE : "{}}<< currentScore << endl;}
+\DoxyCodeLine{00129     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoard_a50c58245b306a2cab7487b2258e582ef}\label{classBoard_a50c58245b306a2cab7487b2258e582ef}} 
+\index{Board@{Board}!setBoardOK@{setBoardOK}}
+\index{setBoardOK@{setBoardOK}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{setBoardOK()}{setBoardOK()}}
+{\footnotesize\ttfamily bool Board\+::set\+Board\+OK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardH_8h_source_l00076}{76}} of file \mbox{\hyperlink{BoardH_8h_source}{Board\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076 \{\textcolor{keywordflow}{return} setOK;\};}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Board\+H.\+h\item 
+Board.\+cpp\end{DoxyCompactItemize}

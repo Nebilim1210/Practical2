@@ -1,0 +1,54 @@
+\hypertarget{BoardObjectH_8h_source}{}\doxysection{Board\+Object\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef H\_BOARD\_OBJECT}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00002}00002 \textcolor{preprocessor}{\#define H\_BOARD\_OBJECT}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00003}00003 \textcolor{keyword}{enum} ObjectColours \{ BLACK, YELLOW, BLUE, RED, INVISIBLE, BACKGROUND\};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00004}00004 \textcolor{keyword}{enum} ObjectTypes \{ THE\_BACKGROUND, A\_COOKIE, A\_PLAYER ,A\_WALL\};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00007}\mbox{\hyperlink{classBoardObject}{00007}} \textcolor{keyword}{class }\mbox{\hyperlink{classBoardObject}{BoardObject}}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00010}00010 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00011}00011         \textcolor{keywordtype}{int} x,y;}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00012}00012         ObjectColours currentColor;}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00013}00013 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00014}00014     ObjectTypes myClass;}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00015}00015     \textcolor{comment}{//int unique\_ID;}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00016}00016     \textcolor{comment}{//static int count;}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00017}00017 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00018}00018         \mbox{\hyperlink{classBoardObject}{BoardObject}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y)}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00019}00019                 \{ x=start\_x; y=start\_y;}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00020}00020                   currentColor=BACKGROUND; }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00021}00021           myClass=THE\_BACKGROUND;}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00022}00022           }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00023}00023           \textcolor{comment}{//unique\_ID=count++;}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00024}00024                 \};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00026}00026         \textcolor{comment}{//int get\_ID() \{ return unique\_ID;\};}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00028}00028         \textcolor{keywordtype}{int} get\_x() \{ \textcolor{keywordflow}{return} x;\};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00029}00029         \textcolor{keywordtype}{int} get\_y() \{ \textcolor{keywordflow}{return} y;\};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00030}00030     ObjectTypes get\_Type() \{\textcolor{keywordflow}{return} myClass;\}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00031}00031     }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00033}00033         ObjectColours get\_Color() \{\textcolor{keywordflow}{return} currentColor; \}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00035}00035         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} touch() \{currentColor=BACKGROUND; \}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00037}00037 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00039}00039     \textcolor{keywordtype}{void} set\_color(ObjectColours new\_color)}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00040}00040         \{currentColor=new\_color;\};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00041}00041         \textcolor{keywordtype}{void} set\_x(\textcolor{keywordtype}{int} new\_x) \{ x=new\_x;\};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00042}00042         \textcolor{keywordtype}{void} set\_y(\textcolor{keywordtype}{int} new\_y) \{y=new\_y;\};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00045}00045 \};}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00047}00047 \textcolor{comment}{//int BoardObject::count=0;}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00048}00048 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// H\_BOARD\_OBJECT}}
+\DoxyCodeLine{\Hypertarget{BoardObjectH_8h_source_l00049}00049 }
+
+\end{DoxyCode}

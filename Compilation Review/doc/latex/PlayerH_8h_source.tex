@@ -1,0 +1,32 @@
+\hypertarget{PlayerH_8h_source}{}\doxysection{Player\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef H\_PLAYER}}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00002}00002 \textcolor{preprocessor}{\#define H\_PLAYER}}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00005}00005 \textcolor{keyword}{enum} PlayerState \{ ALIVE, DEAD\};}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00009}\mbox{\hyperlink{classPlayer}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classPlayer}{Player}} : \textcolor{keyword}{public} \mbox{\hyperlink{classBoardObject}{BoardObject}}}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00012}00012 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00013}00013     PlayerState status;}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00014}00014     ObjectColours color1;}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00015}00015     ObjectColours  color2;}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00017}00017 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00018}00018     \mbox{\hyperlink{classPlayer}{Player}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y):\mbox{\hyperlink{classBoardObject}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00019}00019         \{ status=ALIVE;}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00020}00020           color1 = RED;}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00021}00021           color2  = BLUE;}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00022}00022           myClass=A\_PLAYER;}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00023}00023         \};}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00025}00025     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} touch ();}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00026}00026 \};}
+\DoxyCodeLine{\Hypertarget{PlayerH_8h_source_l00027}00027 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

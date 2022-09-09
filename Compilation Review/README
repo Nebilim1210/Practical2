@@ -57,5 +57,5 @@ it will contain one less after the call.
 
 - isThereAWall has no precondition. Its postcondition is that it will return true only if there is a Wall object in the list, and false otherwise.
 
-- isCookieValue has no precondition. Its postcondition is that if if the list contained one ore more cookies before the call,
+- isCookieValue has no precondition. Its postcondition is that if the list contained one ore more cookies before the call,
 it will contain one less after the call and return the value of a cookie in terms of points. Otherwise nothing happens.

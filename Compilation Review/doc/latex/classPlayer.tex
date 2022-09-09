@@ -1,0 +1,84 @@
+\hypertarget{classPlayer}{}\doxysection{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPlayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_a5f008d8ca05b475787cb6f78b6a9a8c2}{Player}} (int start\+\_\+x, int start\+\_\+y)
+\item 
+virtual void \mbox{\hyperlink{classPlayer_a571696d9065669580ad7b37fdaa119c2}{touch}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{PlayerH_8h_source_l00009}{9}} of file \mbox{\hyperlink{PlayerH_8h_source}{Player\+H.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlayer_a5f008d8ca05b475787cb6f78b6a9a8c2}\label{classPlayer_a5f008d8ca05b475787cb6f78b6a9a8c2}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PlayerH_8h_source_l00018}{18}} of file \mbox{\hyperlink{PlayerH_8h_source}{Player\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018                                      :\mbox{\hyperlink{classBoardObject}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{00019         \{ status=ALIVE;}
+\DoxyCodeLine{00020           color1 = RED;}
+\DoxyCodeLine{00021           color2  = BLUE;}
+\DoxyCodeLine{00022           myClass=A\_PLAYER;}
+\DoxyCodeLine{00023         \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayer_a571696d9065669580ad7b37fdaa119c2}\label{classPlayer_a571696d9065669580ad7b37fdaa119c2}} 
+\index{Player@{Player}!touch@{touch}}
+\index{touch@{touch}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{touch()}{touch()}}
+{\footnotesize\ttfamily void Player\+::touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classBoardObject}{Board\+Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007         \{ \textcolor{keywordflow}{switch} (status)}
+\DoxyCodeLine{00008           \{ \textcolor{keywordflow}{case} ALIVE : \textcolor{keywordflow}{if} (color1==get\_Color() )}
+\DoxyCodeLine{00009                         set\_color(color2);}
+\DoxyCodeLine{00010                       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00011                          set\_color(color1);}
+\DoxyCodeLine{00012                                    \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00013             \textcolor{keywordflow}{case}  DEAD :}
+\DoxyCodeLine{00014                          set\_color(YELLOW);}
+\DoxyCodeLine{00015           \}}
+\DoxyCodeLine{00016         \textcolor{comment}{//std::cerr << "{} Player Object touched\(\backslash\)n"{};}}
+\DoxyCodeLine{00017         \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Player\+H.\+h\item 
+Player.\+cpp\end{DoxyCompactItemize}

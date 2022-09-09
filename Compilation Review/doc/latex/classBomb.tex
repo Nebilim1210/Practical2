@@ -1,0 +1,73 @@
+\hypertarget{classBomb}{}\doxysection{Bomb Class Reference}
+\label{classBomb}\index{Bomb@{Bomb}}
+Inheritance diagram for Bomb\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBomb}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBomb_ab84be132f5552babb849c520cf3afd68}{Bomb}} (int startX, int startY)
+\item 
+void \mbox{\hyperlink{classBomb_a4e455f9b273fc9508e5a043d55765d5a}{touch}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Bomb_8h_source_l00006}{6}} of file \mbox{\hyperlink{Bomb_8h_source}{Bomb.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBomb_ab84be132f5552babb849c520cf3afd68}\label{classBomb_ab84be132f5552babb849c520cf3afd68}} 
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}}
+{\footnotesize\ttfamily Bomb\+::\+Bomb (\begin{DoxyParamCaption}\item[{int}]{startX,  }\item[{int}]{startY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{Bomb_8h_source_l00012}{12}} of file \mbox{\hyperlink{Bomb_8h_source}{Bomb.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012                                  : \mbox{\hyperlink{classBoardObject}{BoardObject}}(startX, startY) \{}
+\DoxyCodeLine{00013         color = BLACK;}
+\DoxyCodeLine{00014     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBomb_a4e455f9b273fc9508e5a043d55765d5a}\label{classBomb_a4e455f9b273fc9508e5a043d55765d5a}} 
+\index{Bomb@{Bomb}!touch@{touch}}
+\index{touch@{touch}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{touch()}{touch()}}
+{\footnotesize\ttfamily void Bomb\+::touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classBoardObject}{Board\+Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010     std::cout << \textcolor{stringliteral}{"{}You touched a bomb."{}} << std::endl;}
+\DoxyCodeLine{00011 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bomb.\+h\item 
+Bomb.\+cpp\end{DoxyCompactItemize}

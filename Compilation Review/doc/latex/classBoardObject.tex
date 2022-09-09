@@ -1,0 +1,208 @@
+\hypertarget{classBoardObject}{}\doxysection{Board\+Object Class Reference}
+\label{classBoardObject}\index{BoardObject@{BoardObject}}
+Inheritance diagram for Board\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBoardObject}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBoardObject_ae3787f9dd246d1b4e04e459ad51e598c}{Board\+Object}} (int start\+\_\+x, int start\+\_\+y)
+\item 
+int \mbox{\hyperlink{classBoardObject_add4300aa8ad3dbe4f1efc292a5ec1fc1}{get\+\_\+x}} ()
+\item 
+int \mbox{\hyperlink{classBoardObject_aca38e848cb993ff1d979dec3ff0d8e7d}{get\+\_\+y}} ()
+\item 
+Object\+Types \mbox{\hyperlink{classBoardObject_a909774486597d4ce7c55695e1e1c2244}{get\+\_\+\+Type}} ()
+\item 
+Object\+Colours \mbox{\hyperlink{classBoardObject_ad51b40b27fbb3bfb07ffa1ee1fd80769}{get\+\_\+\+Color}} ()
+\item 
+virtual void \mbox{\hyperlink{classBoardObject_a29e18ef0b024ed21dff561b8ee0df919}{touch}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBoardObject_a39f0202cca7f28f360b54e93a0a18ad1}{set\+\_\+color}} (Object\+Colours new\+\_\+color)
+\item 
+void \mbox{\hyperlink{classBoardObject_a3c511af95bba5fd5a08e2c4195b2adb3}{set\+\_\+x}} (int new\+\_\+x)
+\item 
+void \mbox{\hyperlink{classBoardObject_a4c330ad1094250666125ed0908a1d1a0}{set\+\_\+y}} (int new\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Object\+Types \mbox{\hyperlink{classBoardObject_a94d093bb880e76422aff0638ff000035}{my\+Class}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00007}{7}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBoardObject_ae3787f9dd246d1b4e04e459ad51e598c}\label{classBoardObject_ae3787f9dd246d1b4e04e459ad51e598c}} 
+\index{BoardObject@{BoardObject}!BoardObject@{BoardObject}}
+\index{BoardObject@{BoardObject}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{BoardObject()}{BoardObject()}}
+{\footnotesize\ttfamily Board\+Object\+::\+Board\+Object (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00018}{18}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019                 \{ x=start\_x; y=start\_y;}
+\DoxyCodeLine{00020                   currentColor=BACKGROUND; }
+\DoxyCodeLine{00021           myClass=THE\_BACKGROUND;}
+\DoxyCodeLine{00022           }
+\DoxyCodeLine{00023           \textcolor{comment}{//unique\_ID=count++;}}
+\DoxyCodeLine{00024                 \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBoardObject_ad51b40b27fbb3bfb07ffa1ee1fd80769}\label{classBoardObject_ad51b40b27fbb3bfb07ffa1ee1fd80769}} 
+\index{BoardObject@{BoardObject}!get\_Color@{get\_Color}}
+\index{get\_Color@{get\_Color}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{get\_Color()}{get\_Color()}}
+{\footnotesize\ttfamily Object\+Colours Board\+Object\+::get\+\_\+\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00033}{33}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033 \{\textcolor{keywordflow}{return} currentColor; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoardObject_a909774486597d4ce7c55695e1e1c2244}\label{classBoardObject_a909774486597d4ce7c55695e1e1c2244}} 
+\index{BoardObject@{BoardObject}!get\_Type@{get\_Type}}
+\index{get\_Type@{get\_Type}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{get\_Type()}{get\_Type()}}
+{\footnotesize\ttfamily Object\+Types Board\+Object\+::get\+\_\+\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00030}{30}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030 \{\textcolor{keywordflow}{return} myClass;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoardObject_add4300aa8ad3dbe4f1efc292a5ec1fc1}\label{classBoardObject_add4300aa8ad3dbe4f1efc292a5ec1fc1}} 
+\index{BoardObject@{BoardObject}!get\_x@{get\_x}}
+\index{get\_x@{get\_x}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{get\_x()}{get\_x()}}
+{\footnotesize\ttfamily int Board\+Object\+::get\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00028}{28}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028 \{ \textcolor{keywordflow}{return} x;\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoardObject_aca38e848cb993ff1d979dec3ff0d8e7d}\label{classBoardObject_aca38e848cb993ff1d979dec3ff0d8e7d}} 
+\index{BoardObject@{BoardObject}!get\_y@{get\_y}}
+\index{get\_y@{get\_y}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{get\_y()}{get\_y()}}
+{\footnotesize\ttfamily int Board\+Object\+::get\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00029}{29}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029 \{ \textcolor{keywordflow}{return} y;\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoardObject_a39f0202cca7f28f360b54e93a0a18ad1}\label{classBoardObject_a39f0202cca7f28f360b54e93a0a18ad1}} 
+\index{BoardObject@{BoardObject}!set\_color@{set\_color}}
+\index{set\_color@{set\_color}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{set\_color()}{set\_color()}}
+{\footnotesize\ttfamily void Board\+Object\+::set\+\_\+color (\begin{DoxyParamCaption}\item[{Object\+Colours}]{new\+\_\+color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00039}{39}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040         \{currentColor=new\_color;\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoardObject_a3c511af95bba5fd5a08e2c4195b2adb3}\label{classBoardObject_a3c511af95bba5fd5a08e2c4195b2adb3}} 
+\index{BoardObject@{BoardObject}!set\_x@{set\_x}}
+\index{set\_x@{set\_x}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{set\_x()}{set\_x()}}
+{\footnotesize\ttfamily void Board\+Object\+::set\+\_\+x (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00041}{41}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041 \{ x=new\_x;\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoardObject_a4c330ad1094250666125ed0908a1d1a0}\label{classBoardObject_a4c330ad1094250666125ed0908a1d1a0}} 
+\index{BoardObject@{BoardObject}!set\_y@{set\_y}}
+\index{set\_y@{set\_y}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{set\_y()}{set\_y()}}
+{\footnotesize\ttfamily void Board\+Object\+::set\+\_\+y (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00042}{42}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042 \{y=new\_y;\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBoardObject_a29e18ef0b024ed21dff561b8ee0df919}\label{classBoardObject_a29e18ef0b024ed21dff561b8ee0df919}} 
+\index{BoardObject@{BoardObject}!touch@{touch}}
+\index{touch@{touch}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{touch()}{touch()}}
+{\footnotesize\ttfamily virtual void Board\+Object\+::touch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00035}{35}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035 \{currentColor=BACKGROUND; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBoardObject_a94d093bb880e76422aff0638ff000035}\label{classBoardObject_a94d093bb880e76422aff0638ff000035}} 
+\index{BoardObject@{BoardObject}!myClass@{myClass}}
+\index{myClass@{myClass}!BoardObject@{BoardObject}}
+\doxysubsubsection{\texorpdfstring{myClass}{myClass}}
+{\footnotesize\ttfamily Object\+Types Board\+Object\+::my\+Class\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{BoardObjectH_8h_source_l00014}{14}} of file \mbox{\hyperlink{BoardObjectH_8h_source}{Board\+Object\+H.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Board\+Object\+H.\+h\end{DoxyCompactItemize}

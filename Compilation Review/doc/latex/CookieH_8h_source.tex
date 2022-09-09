@@ -1,0 +1,37 @@
+\hypertarget{CookieH_8h_source}{}\doxysection{Cookie\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef H\_COOKIE}}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00002}00002 \textcolor{preprocessor}{\#define H\_COOKIE}}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00003}00003 \textcolor{keyword}{enum} CookieState \{ VISIBLE, EATEN, EXPIRED\};}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00005}00005 \textcolor{keyword}{enum} PrizeValueIndex \{CHEAP, MEDIUM, USEFUL, DEAR\};}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00010}\mbox{\hyperlink{classCookie}{00010}} \textcolor{keyword}{class }\mbox{\hyperlink{classCookie}{Cookie}} : \textcolor{keyword}{public} \mbox{\hyperlink{classBoardObject}{BoardObject}}}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00013}00013 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00014}00014     CookieState status;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00015}00015     ObjectColours color1;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00016}00016     ObjectColours  color2;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00017}00017     PrizeValueIndex valueIndex;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00019}00019 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00020}00020     \mbox{\hyperlink{classCookie}{Cookie}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y):\mbox{\hyperlink{classBoardObject}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00021}00021         \{ status=VISIBLE;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00022}00022           color1 = YELLOW;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00023}00023           color2  = BLUE;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00024}00024           valueIndex=CHEAP;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00025}00025                   myClass=A\_COOKIE;}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00026}00026         \};}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00028}00028     \textcolor{keywordtype}{int} get\_value();}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00030}00030     \textcolor{keywordtype}{void} touch ();}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00031}00031 \};}
+\DoxyCodeLine{\Hypertarget{CookieH_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

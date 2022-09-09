@@ -1,0 +1,89 @@
+\hypertarget{BoardH_8h_source}{}\doxysection{Board\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00003}00003 \textcolor{preprocessor}{\#define ROWS 20}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00004}00004 \textcolor{preprocessor}{\#define COLUMNS 20}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00007}00007 \textcolor{preprocessor}{\#include  "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00008}00008 \textcolor{preprocessor}{\#include  "{}ListBoardObjectsH.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00009}00009 \textcolor{preprocessor}{\#include  "{}PlayerH.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00010}00010 \textcolor{preprocessor}{\#include  "{}WallH.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00011}00011 \textcolor{preprocessor}{\#include  "{}CookieH.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00013}00013 \textcolor{preprocessor}{\#include "{}VectorBoardObjects.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00014}00014 \textcolor{preprocessor}{\#include "{}Monster.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00015}00015 \textcolor{preprocessor}{\#include "{}Bomb.h"{}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00017}00017 \textcolor{keyword}{typedef}  \mbox{\hyperlink{classListBoardObjects}{ListBoardObjects}}* \mbox{\hyperlink{classListBoardObjects}{p\_ListBoardObjects}};}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00019}\mbox{\hyperlink{classBoard}{00019}} \textcolor{keyword}{class }\mbox{\hyperlink{classBoard}{Board}}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00020}00020 \{}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00022}00022 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00024}00024     \textcolor{keywordtype}{int} the\_rows, the\_cols;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00026}00026     \textcolor{keywordtype}{bool} setOK;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00027}00027     \textcolor{keywordtype}{bool} gameOn;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00028}00028     \textcolor{keywordtype}{int} lives;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00029}00029     \mbox{\hyperlink{classListBoardObjects}{p\_ListBoardObjects}}   mySpace[ROWS][COLUMNS];}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00030}00030     \textcolor{keywordtype}{int} player\_id\_x;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00031}00031     \textcolor{keywordtype}{int} player\_id\_y;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00032}00032     \mbox{\hyperlink{classPlayer}{Player}} *startPlayer;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00033}00033     \textcolor{keywordtype}{int} currentScore;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00034}00034     }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00036}00036 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00038}00038     \mbox{\hyperlink{classBoard}{Board}} (\textcolor{keywordtype}{int} rows, \textcolor{keywordtype}{int} cols)}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00040}00040       \textcolor{keywordflow}{if} ((ROWS >= rows ) \&\& (COLUMNS >= cols)) }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00041}00041         \{ setOK-\/\textcolor{keyword}{true}; the\_rows=rows; the\_cols=cols;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00042}00042                   lives=3000000; gameOn=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00043}00043             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;  i<rows; i++)}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00044}00044               \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0;  j<cols; j++)}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00045}00045                 \{}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00046}00046                       \mbox{\hyperlink{classBoardObject}{BoardObject}}* aBackground = \textcolor{keyword}{new} \mbox{\hyperlink{classBoardObject}{BoardObject}}(i,j);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00047}00047                   \mbox{\hyperlink{classListBoardObjects}{p\_ListBoardObjects}} aList =\textcolor{keyword}{new} \mbox{\hyperlink{classListBoardObjects}{ListBoardObjects}}(aBackground);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00048}00048                   mySpace[i][j]=aList;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00049}00049                 \}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00050}00050             player\_id\_x =the\_rows/2;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00051}00051             player\_id\_y =the\_cols/2;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00052}00052             startPlayer = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00053}00053             currentScore =0;}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00055}00055                     (mySpace[player\_id\_x][player\_id\_y])-\/>addOne(startPlayer);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00057}00057                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<the\_rows-\/1; i++)}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00058}00058                \{ \mbox{\hyperlink{classWall}{Wall}} * aWall = \textcolor{keyword}{new} \mbox{\hyperlink{classWall}{Wall}} (i,1);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00059}00059                          (mySpace[i][1])-\/>addOne(aWall);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00060}00060                  aWall = \textcolor{keyword}{new} \mbox{\hyperlink{classWall}{Wall}} (i,the\_cols-\/2);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00061}00061                          (mySpace[i][the\_cols-\/2])-\/>addOne(aWall);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00062}00062             \}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00064}00064                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<the\_rows-\/1; i=i+2)}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00065}00065                \{ \mbox{\hyperlink{classCookie}{Cookie}} * aCookie = \textcolor{keyword}{new} \mbox{\hyperlink{classCookie}{Cookie}} (i,0);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00066}00066                          (mySpace[i][0])-\/>addOne(aCookie);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00067}00067                  aCookie = \textcolor{keyword}{new} \mbox{\hyperlink{classCookie}{Cookie}} (i,the\_cols-\/1);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00068}00068                          (mySpace[i][the\_cols-\/1])-\/>addOne(aCookie);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00069}00069             \}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00070}00070         \}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00071}00071       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00072}00072         setOK=\textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00074}00074     \};}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00076}00076     \textcolor{keywordtype}{bool} setBoardOK () \{\textcolor{keywordflow}{return} setOK;\};}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00078}00078     \textcolor{keywordtype}{void} paint();}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00080}00080     \textcolor{keywordtype}{void} move(\textcolor{keywordtype}{char} command);}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00082}00082     \textcolor{keywordtype}{bool} IamAlive() \{\textcolor{keywordflow}{if} (0<lives) \{ lives-\/-\/; \textcolor{keywordflow}{return} \textcolor{keyword}{true};\}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00083}00083                          \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{BoardH_8h_source_l00084}00084 \};}
+
+\end{DoxyCode}
