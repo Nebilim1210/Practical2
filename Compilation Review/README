@@ -1,0 +1,61 @@
+Alain,Pierre,Marc Salanie
+Intelligent Agents and Simulation
+Lab 2 Part 2 : modification of the Vlad Estivill-Castro Pack-Man Project
+
+This project has the goal to simulate a revised pac-man game where the player has to eat cookies while finding its way around the walls.
+The main function is located in the file VladPackManGame.cpp
+
+Developing the class VectorBoardObjects (files VectorBoardObjects.cpp and VectorBoardObjects.h) :
+
+This class is meant to be very similar to the class ListBoardObjects, with the only difference being that it can contain only up to 4
+board objects, like cookies, walls or the player. All these classes are subclasses of the BoardObject class, thus it is very doable to have
+pointers to different types of these in a single BoardObject* list.
+
+So we create the class VectorBoardObjects by reusing the code from ListBoardObject, and adding the precondition when adding an object
+in its list attribute that the number of elements already in that list must not exceed 3. If it is not respected, we send an error message
+on the standard error output. We could also throw an exception using the throw function, but we didn't want to make the game crash for this, so
+we left it as a comment.
+I realised afterwards that a way more efficient method would have been to make VectorBoardObjects a subclass of ListBoardObjects
+and to overwrite the addObject method, it would also have permitted to switch back and fort between the two,
+but I have no more time to change it, so it will stay as it is.
+
+Developing the subclasses cookie and monster (Cookie.cpp and .h files, Monster.cpp and .h files) :
+
+We also created simple subclasses of BoardObjects, being monster and bomb. They don't do much when being touched except sending a message on std::cout.
+But as subclasses of BoardObjects, they can be contained by VectorBoardObjects and ListBoardObject.
+
+Testing these classes in the main function (file VladPackManGame.cpp) :
+
+The testing of these function is mostly detailed in the VladPackManGame.cpp file with comments at the beginning of the main function.
+Overall we start by creating the instances of the objects we will insert, then the instance of the VectorBoardObject. After having inserted
+all the objects inside the vector (testing by the way the limit of four objects in a vector), we do some unit test on the methods of VectorBoardObject one by one.
+
+Bonus :
+
+It should also be pointed out that we modified the Makefile.make file to include the newly created classes files.
+Also we modified the function game_all from the Board.cpp file. It contained a warning due to the fact that its final
+switch didn't manage every case, so the function may not have a return value, so we added a default case to fix this.
+
+About Design by Contract :
+Let's talk about the preconditions, invariants and postconditions using design by contract for the methods of ListBoardObjects
+
+- The constructor of ListBoardObjects has a postcondition : the constructed instance will contain a background object (given as parameter) afterwards.
+It is an invariant of the class that a ListBoardObject is never empty.
+
+- The precondition of theFirst is that the list must not be empty.
+The postcondition is that theFirst returns the first element of the list.
+
+- The precondition of theNext is that theFirst must have been used once (to initialize internal iterator).
+The postcondition is that if the next object is non existent because we're at the end of the list, the method returns null.
+
+- addone has no precondition for a ListBoardObject. However for a VectorBoardObject its precondition is that there mustn't be 4
+objects or more present in the vector. It's postcondition is that if the preconditions were respected, the list/vector will have
+one more element than before the call, inserted at the beginning of the list/vector.
+
+- removeOnePlayer has no precondition. Its postcondition is that if the list contained one ore more players before the call,
+it will contain one less after the call.
+
+- isThereAWall has no precondition. Its postcondition is that it will return true only if there is a Wall object in the list, and false otherwise.
+
+- isCookieValue has no precondition. Its postcondition is that if if the list contained one ore more cookies before the call,
+it will contain one less after the call and return the value of a cookie in terms of points. Otherwise nothing happens.
