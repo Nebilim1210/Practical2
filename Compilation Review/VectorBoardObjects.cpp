@@ -31,6 +31,7 @@ void VectorBoardObjects:: addOne(p_BoardObject newOne)
     } else //There are already 4 objects in our vector.
     {
         std::cerr << "Tried to add new object in VectorBoardObjects but maximum of objects in vector is 4." << std::endl;
+        //throw std::invalid_argument( "Tried to add new object in VectorBoardObjects but maximum of objects in vector is 4." );
     }
 }
 
@@ -90,6 +91,3 @@ int VectorBoardObjects :: isCookieValue()
 
     return temp ;
 }
-
-//Finally we create a method to check if the Vector is full or not
-

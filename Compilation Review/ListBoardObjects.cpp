@@ -28,7 +28,7 @@ void ListBoardObjects:: addOne(p_BoardObject newOne)
 	 }
 
 p_BoardObject ListBoardObjects :: theNext()
-	{ 
+	{
 	   internalIterator++;
 	   if (internalIterator < list.end())
 	   {

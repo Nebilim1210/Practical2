@@ -23,7 +23,7 @@ void touch_all (p_ListBoardObjects aList)
 	}
 
 }
-//Also we changed this function because it contained an error.
+//Also we changed this function because it contained an error. Thus, we improved the Switch at the end.
 char game_all (p_ListBoardObjects aList)
 {
     p_BoardObject toIterate;
@@ -47,9 +47,8 @@ char game_all (p_ListBoardObjects aList)
         case RED : return 'R';
         case INVISIBLE : return 'I';
         case BACKGROUND : return '*';
+        default: return 'X';
     }
-
-    return '0';
 }
 
 void Board:: move(char command)
